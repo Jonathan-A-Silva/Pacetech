@@ -1,0 +1,66 @@
+algoritmo "semnome"
+var H: vetor [1..5] de literal
+T : vetor [1..5] de real
+N,aux,p : inteiro
+TC : vetor [1..5] de real
+TF : vetor [1..5] de real
+temp: real
+temp2:literal
+inicio
+
+para N de 1 ate 5 faca
+ escreval("escreva a", N,"� hora registrada logo ap�s informe a temperatura")
+  escreva("hora = ")
+  leia(H[n])
+  escreva("temperatura = ")
+  leia(T[n])
+   limpatela
+fimpara
+
+
+para n de 1 ate 5 faca
+ para aux de 1 ate 5 faca
+  se T[aux]>T[N]entao
+   temp<-T[N]
+   temp2<-H[N]
+    T[N]<-T[AUX]
+    H[N]<-H[AUX]
+    T[AUX]<-temp
+    H[AUX]<-temp2
+
+fimse
+fimpara
+fimpara
+
+escreval ("A temperatura registrada foi?, e sera convertida para")
+ escreval ("op��o 1 Fahrenheit Para celsius")
+  escreval ("op��o 2 celsius Para Fahrenheit")
+   leia (P)
+    limpatela
+
+
+para N de 1 ate 5 faca
+ se p = 2 entao
+  TF[N] <- T[N] * 1.8 +32
+ senao
+  TC[N] <- (T[N] - 32) *5/9
+
+fimse
+fimpara
+
+//TF<- (TC * 1.8) +32 TC<- (TF - 32) *5/9
+
+
+
+para n de 1 ate 5 faca
+
+se p = 2 entao
+ escreval ("A Temperatura ",t[n],"� graus Celsius, registrada as ",h[n],"h corresponde a ",TF[n],"� graus Fahrenheit. ")
+senao
+ escreval ("A Temperatura ",t[n],"� graus Fahrenheit, registrada as ",h[n],"h corresponde a ",TC[n],"� graus Celsius . ")
+
+
+fimse
+fimpara
+fimalgoritmo
+
